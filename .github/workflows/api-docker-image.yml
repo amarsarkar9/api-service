@@ -7,12 +7,25 @@ on:
     branches: [ "main" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+    
+    - name: Login to azure container registry
+        uses: docker/login-action@v1apiservicerg.azurecr.io
+        with:
+          registry: apiservicerg.azurecr.io
+          username: ${{ secrets.AZURE_USERNAME }}
+          password: ${{ secrets.AZURE_PASSWORD }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          push: true
+          context: .
+          file: ./Dockerfile
+          tags: user/app:latest
