@@ -17,7 +17,7 @@ jobs:
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
     
     - name: Login to azure container registry
-      uses: docker/login-action@v1apiservicerg.azurecr.io
+      uses: docker/login-action@v1
       with:
         registry: apiservicerg.azurecr.io
         username: ${{ secrets.AZURE_USERNAME }}
