@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/amarsarkar9/api-service.git
     targetRevision: HEAD
-    # path: api-service
+    path: Deployment
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
