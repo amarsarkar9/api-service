@@ -34,7 +34,8 @@ spec:
 
       - name: api-app
 
-        image: apiservicerg.azurecr.io/api-app:latest
+        # image: apiservicerg.azurecr.io/api-app:latest
+        image: docker pull ghcr.io/anicca-computer-vision/cv-metric-service:main
 
         ports:
 
