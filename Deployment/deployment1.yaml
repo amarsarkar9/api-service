@@ -5,7 +5,7 @@ kind: Deployment
 metadata:
 
   name: app
-  namespace: prac
+  namespace: myapp
 
   labels:
 
