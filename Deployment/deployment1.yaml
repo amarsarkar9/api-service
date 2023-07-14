@@ -4,7 +4,7 @@ kind: Deployment
 
 metadata:
 
-  name: api-deployment
+  name: app
   namespace: prac
 
   labels:
