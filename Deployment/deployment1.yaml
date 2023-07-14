@@ -5,6 +5,7 @@ kind: Deployment
 metadata:
 
   name: api-deployment
+  namespace: prac
 
   labels:
 
@@ -12,7 +13,7 @@ metadata:
 
 spec:
 
-  replicas: 3
+  replicas: 1
 
   selector:
 
@@ -35,7 +36,7 @@ spec:
       - name: api-app
 
         # image: apiservicerg.azurecr.io/api-app:latest
-        image: docker pull ghcr.io/anicca-computer-vision/cv-metric-service:main
+        image: amarsarkar/app:latest
 
         ports:
 

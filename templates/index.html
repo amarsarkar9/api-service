@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Form</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+		}
+		input[type=text], input[type=email], textarea {
+			width: 100%;
+			padding: 12px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+			margin-bottom: 16px;
+			resize: vertical;
+		}
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 12px 20px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+		}
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+		label {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 6px;
+		}
+	</style>
+</head>
+<body>
+
+	<form action="/sign_up" method="post">
+		<label for="name">Name</label>
+		<input type="text" id="name" name="name" placeholder="Enter your name">
+
+		<label for="email">Email</label>
+		<input type="email" id="email" name="email" placeholder="Enter your email">
+
+		<label for="message">Message</label>
+		<textarea id="message" name="message" placeholder="Enter your message"></textarea>
+
+		<input type="submit" value="Submit" >
+	</form>
+</body>
+</html>
