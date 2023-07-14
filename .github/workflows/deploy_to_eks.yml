@@ -38,8 +38,9 @@ jobs:
               
       - name: Deploy image to eks
         run: |
-#          kubectl delete deploy api-app -n myapp
           kubectl apply -f Deployment/deployment1.yaml
+#          kubectl delete deploy api-app -n myapp
+           
           
           
           
