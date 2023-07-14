@@ -40,6 +40,7 @@ jobs:
         run: |
           kubectl delete deploy api-app -n myapp
           kubectl apply -f Deployment/deployment1.yaml
+           
           
           
           
