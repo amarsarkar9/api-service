@@ -36,7 +36,7 @@ spec:
       - name: api-app
 
         # image: apiservicerg.azurecr.io/api-app:latest
-        image: amarsarkar/app:latest
+        image: ghcr.io/amarsarkar9/api-service:latest
 
         ports:
 
